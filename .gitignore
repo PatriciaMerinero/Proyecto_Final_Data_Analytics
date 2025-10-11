@@ -1,0 +1,10 @@
+#Ignorar entorno virtual
+entorno_proyecto_final/
+
+# Ignorar configuraciones locales de VS Code
+.vscode/
+
+# Ignorar archivos temporales y de caché
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
