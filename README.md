@@ -49,7 +49,30 @@ En esta fase se ejecutó el flujo completo de transformación de los datos para 
 ---
 
 ## 🚀 5. Cómo ejecutar este proyecto  
-1. Clona el repositorio:  
-   ```bash
-   git clone https://github.com/PatriciaMerinero/Proyecto_Final_Data_Analytics.git
+
+1️⃣ Clona el repositorio:
+
+https://github.com/PatriciaMerinero/Proyecto_Final_Data_Analytics.git
+
+2️⃣ Crea y activa un entorno virtual (por ejemplo usando venv).
+
+🟢 entorno: entorno_proyecto_final
+🐍 versión: Python 3.13.8
+
+3️⃣ Instala dependencias:
+
+pip install -r requirements.txt
+
+4️⃣ Abre los notebooks en la carpeta NOTEBOOKS y ejecútalos en orden:
+
+01_EDA_PRELIMINAR.ipynb
+
+02_EDA_LIMPIEZA_TRANSFORMACION.ipynb
+
+
+
+
+
+
+   
 
