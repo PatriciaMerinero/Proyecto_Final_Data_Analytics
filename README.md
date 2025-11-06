@@ -16,7 +16,9 @@ Se busca responder preguntas como:
 
 ---
 
-## 📁 2. Estructura del repositorio  
+## 2. Estructura
+
+
 
 <img width="406" height="173" alt="image" src="https://github.com/user-attachments/assets/7a87787a-b311-4883-8f8d-c5e47bf689f6" />
 
