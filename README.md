@@ -45,10 +45,17 @@ En esta fase se ejecutó el flujo completo de transformación de los datos para 
 
 ## 📊 4. Análisis Exploratorio de Datos (EDA)  
 *(Aquí añadirás más adelante los resultados principales, gráficos y hallazgos)*
+---
+
+
+### 🔄 5. Actualización de datasets iniciales (08/11/2025)
+- Se han reemplazado los archivos originales `clientes_sinteticos.csv` y `transacciones_sinteticas.csv` por versiones ampliadas con mayor número de filas (≈65.000 en total).  
+- Se mantiene la misma estructura de columnas, tipología de datos y consistencia relacional.  
+- El reemplazo garantiza el cumplimiento del requisito mínimo de tamaño del conjunto de datos (>50.000 filas).
 
 ---
 
-## 🚀 5. Cómo ejecutar este proyecto  
+## 🚀 6. Cómo ejecutar este proyecto  
 
 1️⃣ Clona el repositorio:
 
