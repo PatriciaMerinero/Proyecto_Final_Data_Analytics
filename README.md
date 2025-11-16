@@ -124,4 +124,66 @@ PROYECTO_FINAL_DATA_ANALYTICS/
 ├── README.md
 
 
+```
+
+## 4. 🛠️ Instalación y requisitos
+
+Este proyecto se puede ejecutar en cualquier equipo que tenga instalado Python y Power BI.  
+A continuación se detalla todo lo necesario para reproducir el análisis y el dashboard.
+
+
+---
+
+### 4.1. ✔ Software necesario
+
+Para ejecutar correctamente el proyecto se deben instalar:
+
+- **Python 3.10 o superior**
+- **Visual Studio Code**
+  - Extensión: *Python*
+  - Extensión: *Jupyter*
+- **Power BI Desktop** (para abrir el dashboard `.pbix`)
+- **Git** (opcional, si deseas clonar el repositorio)
+
+---
+
+### 4.2. ✔ Clonar o descargar el proyecto
+
+Si está disponible en GitHub:
+
+```bash
+git clone https://github.com/PatriciaMerinero/Proyecto_Final_Data_Analytics.git
+
+
+```
+
+### 4.3. ✔ Activar el entorno virtual
+
+Antes de instalar las dependencias, activa el entorno virtual del proyecto:
+
+**Windows**
+```bash
+entorno_proyecto_final\Scripts\activate
+
+```
+### 4.4  ✔  Instalación de dependencias
+
+Antes de ejecutar los notebooks, instala las librerías necesarias con:
+
+```bash
+pip install -r requirements.txt
+
+
+> Nota: El archivo `requirements.txt` ha sido generado automáticamente con  
+> `pip freeze` desde el entorno virtual del proyecto, tal y como se recomienda  
+> en las buenas prácticas de reproducibilidad.
+
+
+
+
+
+
+
+
+
 
