@@ -3,18 +3,99 @@
 
 
 
-# Proyecto_final_Data_Analytics
+#  Proyecto_final_Data_Analytics
 Proyecto final del *Máster en Data Analytics*, centrado en el análisis exploratorio de un conjunto de datos bancarios sintéticos mediante Python.  
 El trabajo se estructura en varios notebooks (EDA preliminar, limpieza, análisis descriptivo e informe) y se complementa con un dashboard en Power BI.
 
 
 
-**Título del proyecto:** Análisis de fraudes en transacciones bancarias  
+## 1. **Título del proyecto:** Análisis de fraudes en transacciones bancarias  
 **Autor:** Patricia Merinero  
 **Fecha:** Noviembre 2025  
 
+---
+---
 
-## 📂 Estructura del proyecto
+
+## 2. 📝 Descripción del proyecto
+
+Este proyecto forma parte del **Proyecto Final del Máster en Data Analytics** y tiene como objetivo analizar un conjunto de datos sintéticos de **clientes** y **transacciones financieras** para obtener una visión clara del comportamiento de los clientes y del **riesgo de fraude en las operaciones**.
+
+A partir de los ficheros originales (`clientes_sinteticos.csv` y `transacciones_sinteticas.csv`), se construye un flujo de trabajo completo de **análisis exploratorio de datos (EDA)** en Python y un **dashboard interactivo en Power BI** que permite a perfiles no técnicos explorar los resultados de forma visual.
+
+
+---
+### 🎯 Objetivo principal
+
+El objetivo del proyecto es:
+
+> **Detectar patrones de comportamiento y riesgo en las transacciones, con especial foco en el fraude, para apoyar la toma de decisiones en un contexto similar al de una entidad financiera.**
+
+Para ello se:
+- Unifican y transforman las bases de datos de clientes y transacciones.
+- Analizan las **características de los clientes**, las **operaciones** y las **variables asociadas al fraude**.
+- Diseñan **KPIs y visualizaciones** que permiten entender:
+  - el riesgo por **país del comercio**,
+  - el perfil de la operación por **modo de entrada**,  
+  - y el **perfil del cliente** asociado al fraude.
+
+---
+### 🧩 Problema que aborda
+
+En un entorno de pagos, los datos suelen estar **dispersos** entre varias fuentes (clientes, transacciones, atributos de riesgo…), lo que dificulta:
+
+- Tener una **visión consolidada** del comportamiento del cliente.
+- Medir correctamente la **tasa e impacto del fraude**.
+- Detectar segmentos, países o modos de entrada con **mayor concentración de riesgo**.
+
+Este proyecto simula ese escenario y propone una solución basada en:
+
+- Un **dataset unificado y limpio** (`datos_unidos.csv` y `dataset_limpio_y_transformado.csv`).
+- Un **análisis descriptivo** estructurado.
+- Un **dashboard** que responde a preguntas clave como:
+  - ¿En qué países se concentra más el fraude?
+  - ¿Qué modos de entrada de la operación presentan mayor riesgo?
+  - ¿Qué tipo de clientes están más expuestos al fraude?
+
+---
+
+### 🛠️ Técnicas y enfoques utilizados
+
+Para llevar a cabo el análisis se ha seguido un enfoque **paso a paso**, estructurado en distintos notebooks:
+
+#### ▸ Integración y preparación de datos
+- Unión de bases de clientes y transacciones.
+- Revisión de tipos de datos (fechas, numéricos, categóricos).
+- Tratamiento de **valores nulos**, **duplicados** y registros inconsistentes.
+- Creación de variables derivadas (categorías de ingresos, indicadores de fraude, agrupaciones geográficas, etc.).
+
+#### ▸ Análisis exploratorio y descriptivo (EDA)
+- Estadísticos descriptivos (medias, medianas, percentiles, distribución de importes).
+- Análisis univariante y bivariante por:
+  - país del comercio,
+  - modo de entrada de la operación,
+  - características del cliente.
+- Cálculo de métricas clave:
+  - **tasa de fraude**,
+  - **importe total y medio de fraude**,
+  - distribución del fraude por país, modo de entrada y perfil de cliente.
+
+#### ▸ Visualización y dashboard
+- Generación de gráficos exploratorios en Python.
+- Definición de **KPIs** relevantes para negocio.
+- Construcción de un **dashboard en Power BI** que permite:
+  - filtrar por país, modo de entrada y características del cliente,
+  - visualizar mapas de riesgo,
+  - comparar volumen e importe de fraude entre segmentos.
+
+---
+
+En conjunto, el proyecto muestra cómo pasar de **datos en bruto** a **insights accionables**, utilizando técnicas de análisis exploratorio, tratamiento de datos y visualización orientadas específicamente al contexto de **fraude en transacciones financieras**.
+
+---
+---
+
+## 📂 3. Estructura del proyecto
 
 
 ```text
@@ -43,80 +124,4 @@ PROYECTO_FINAL_DATA_ANALYTICS/
 ├── README.md
 
 
-
-## 🧭 1. Objetivo del proyecto  
-Este proyecto tiene como objetivo analizar un conjunto de datos de transacciones financieras de clientes, con foco en la detección de patrones de fraude.  
-Se busca responder preguntas como:  
-- ¿Qué variables explican mejor las operaciones fraudulentas?  
-- ¿Existen diferencias geográficas o temporales en los fraudes?  
-- ¿Cómo se comportan los clientes con mayor nivel de riesgo?
-
----
-
-## 2. Estructura
-
-
-
-<img width="406" height="173" alt="image" src="https://github.com/user-attachments/assets/7a87787a-b311-4883-8f8d-c5e47bf689f6" />
-
-
-
-
----
-
-## 🧹 3. Limpieza y Transformación de datos  
-En esta fase se ejecutó el flujo completo de transformación de los datos para dejarlos listos para el análisis exploratorio y la visualización.
-
-**Pasos principales:**
-1. Identificadores y trazabilidad: revisión de `transaction_id`, `customer_id`.  
-2. Datos financieros y de transacción: limpieza de `amount`, `currency`.  
-3. Información del comercio y categoría: normalización de `merchant`, `merchant_category`.  
-4. Información del cliente y contacto: limpieza de `name`, `email`, `phone`.  
-5. Geolocalización: normalización de `region_normalized` (cliente) y `country_normalized` (transacción), creación de `is_international`.  
-6. Temporalidad de las transacciones: transformación de `transaction_time`, creación de `transaction_date`, `transaction_hour`, `hour`, `year`, `month`, `day`, `weekday`, `month_year`.  
-7. Antigüedad de los clientes (`customer_days_active`): cálculo de cuántos días lleva activo el cliente.  
-7.1 Unificación y orden de columnas: reorganización del dataset en bloques temáticos.  
-8. Exportación final: guardado del dataset limpio en `DATA_OUTPUT` listo para el EDA.
-
----
-
-## 📊 4. Análisis Exploratorio de Datos (EDA)  
-*(Aquí añadirás más adelante los resultados principales, gráficos y hallazgos)*
----
-
-
-### 🔄 5. Actualización de datasets iniciales (08/11/2025)
-- Se han reemplazado los archivos originales `clientes_sinteticos.csv` y `transacciones_sinteticas.csv` por versiones ampliadas con mayor número de filas (≈65.000 en total).  
-- Se mantiene la misma estructura de columnas, tipología de datos y consistencia relacional.  
-- El reemplazo garantiza el cumplimiento del requisito mínimo de tamaño del conjunto de datos (>50.000 filas).
-
----
-
-## 🚀 6. Cómo ejecutar este proyecto  
-
-1️⃣ Clona el repositorio:
-
-https://github.com/PatriciaMerinero/Proyecto_Final_Data_Analytics.git
-
-2️⃣ Crea y activa un entorno virtual (por ejemplo usando venv).
-
-🟢 entorno: entorno_proyecto_final
-🐍 versión: Python 3.13.8
-
-3️⃣ Instala dependencias:
-
-pip install -r requirements.txt
-
-4️⃣ Abre los notebooks en la carpeta NOTEBOOKS y ejecútalos en orden:
-
-01_EDA_PRELIMINAR.ipynb
-
-02_EDA_LIMPIEZA_TRANSFORMACION.ipynb
-
-
-
-
-
-
-   
 
