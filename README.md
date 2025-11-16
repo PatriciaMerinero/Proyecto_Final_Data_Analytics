@@ -1,11 +1,48 @@
+
+
+
+
+
 # Proyecto_final_Data_Analytics
-Exploratory Data Analysis (EDA) sobre detección de fraude financiero, combinando información de clientes y transacciones para identificar patrones sospechosos mediante Python y visualización de datos.
+Proyecto final del *Máster en Data Analytics*, centrado en el análisis exploratorio de un conjunto de datos bancarios sintéticos mediante Python.  
+El trabajo se estructura en varios notebooks (EDA preliminar, limpieza, análisis descriptivo e informe) y se complementa con un dashboard en Power BI.
+
+
 
 **Título del proyecto:** Análisis de fraudes en transacciones bancarias  
 **Autor:** Patricia Merinero  
 **Fecha:** Noviembre 2025  
 
----
+
+## 📂 Estructura del proyecto
+
+
+```text
+PROYECTO_FINAL
+├──PROYECTO_FINAL_VISUALIZACION_POWERBI.pbix
+
+PROYECTO_FINAL_DATA_ANALYTICS/
+├── DATA/
+│   ├── DATA_RAW/
+│   │   ├── clientes_sinteticos.csv
+│   │   └── transacciones_sinteticas.csv
+│   │
+│   └── DATA_OUTPUT/
+│       └── EDA/
+│           ├── datos_unidos.csv
+│           └── dataset_limpio_y_transformado.csv
+│
+├── NOTEBOOKS/
+│   ├── 01_EDA_PRELIMINAR.ipynb
+│   ├── 02_EDA_LIMPIEZA_TRANSFORMACION.ipynb
+│   ├── 03_EDA_ANALISIS_DESCRIPTIVO.ipynb
+│   └── 04_INFORME.ipynb
+│
+├── entorno_proyecto_final/        # Entorno virtual (excluido en .gitignore)
+├── .gitignore
+├── README.md
+
+
 
 ## 🧭 1. Objetivo del proyecto  
 Este proyecto tiene como objetivo analizar un conjunto de datos de transacciones financieras de clientes, con foco en la detección de patrones de fraude.  
