@@ -99,19 +99,30 @@ En conjunto, el proyecto muestra cómo pasar de **datos en bruto** a **insights 
 
 
 ```text
-PROYECTO_FINAL
-├──PROYECTO_FINAL_VISUALIZACION_POWERBI.pbix
+
 
 PROYECTO_FINAL_DATA_ANALYTICS/
+│
 ├── DATA/
-│   ├── DATA_RAW/
-│   │   ├── clientes_sinteticos.csv
-│   │   └── transacciones_sinteticas.csv
+│   ├── DATA_OUTPUT/
+│   │   ├── dataset_limpio_y_transformado.csv
+│   │   └── datos_unidos.csv
 │   │
-│   └── DATA_OUTPUT/
-│       └── EDA/
-│           ├── datos_unidos.csv
-│           └── dataset_limpio_y_transformado.csv
+│   ├── EDA/
+│   │   ├── amount_por_risk_level.csv
+│   │   ├── comparativa_fraude.csv
+│   │   ├── distribución_fraude_mes.png
+│   │   ├── fraud_por_tipo_tarjeta.png
+│   │   ├── Operaciones_fraude_dia_mes.png
+│   │   ├── tasa_fraude_topN_merchant.png
+│   │   └── *todas las gráficas generadas durante el análisis exploratorio*
+│   │
+│   └── DATA_RAW/
+│       ├── clientes_sinteticos.csv
+│       └── transacciones_sinteticas.csv
+│
+├── INFORME/
+│   └── 04_INFORME.pdf
 │
 ├── NOTEBOOKS/
 │   ├── 01_EDA_PRELIMINAR.ipynb
@@ -119,10 +130,12 @@ PROYECTO_FINAL_DATA_ANALYTICS/
 │   ├── 03_EDA_ANALISIS_DESCRIPTIVO.ipynb
 │   └── 04_INFORME.ipynb
 │
-├── entorno_proyecto_final/        # Entorno virtual (excluido en .gitignore)
+├── POWER BI/
+│   └── PROYECTO_FINAL_VISUALIZACION_POWERBI.pbix
+│
 ├── .gitignore
 ├── README.md
-
+└── requirements.txt
 
 ```
 
