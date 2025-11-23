@@ -191,6 +191,19 @@ pip install -r requirements.txt
 > `pip freeze` desde el entorno virtual del proyecto, tal y como se recomienda  
 > en las buenas prácticas de reproducibilidad.
 
+```
+### 4.5 ✔  Registrar el entorno como kernel de Jupyter
+
+Para que Visual Studio Code o Jupyter Notebook puedan ejecutar las celdas usando este entorno virtual, es necesario instalar y registrar el paquete ipykernel.
+
+Después, registra el entorno como kernel disponible
+
+```bash
+pip install ipykernel
+
+
+python -m ipykernel install --user --name entorno_proyecto_final --display-name "Python (entorno_proyecto_final)"
+
 ---
 ---
 ```
